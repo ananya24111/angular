@@ -1,0 +1,45 @@
+<div class="bg" >
+  <div class="container" style="width:700px">
+    <div class="row">
+      <div class="col">
+        <div  style="text-align: center;color:white; font-size: 30px;">Create Doctor Information
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="width:700px">
+    <div class="row">
+      <div style="width: 720px;padding-left: 100px;padding-right: 100px;">
+        <form >
+          <div class="mb-2" style="float: center">
+            <label for="" style="color:white;">Name</label>
+            <input name="name" [(ngModel)]="doctor.name" name="name" [value]="doctor.name" required="true" type="text" class="form-control" placeholder="Doctor name">
+          </div>
+          <div class="mb-2">
+            <label for="" style="color:white;">Specialization</label>
+            <input name="field" [(ngModel)]="doctor.field" name="field" [value]="doctor.field" required="true" type="text" class="form-control" placeholder="Enter Field">
+          </div>
+          <div class="mb-2">
+            <label for="" style="color:white;">Age</label>
+            <input name="age" [(ngModel)]="doctor.age" name="age" [value]="doctor.age" required="true" type="number" class="form-control" placeholder="Enter age">
+          </div>
+          <div class="mb-2">
+            <label for="gender" style="color:white;">Choose Gender</label>
+            <select id="gender"[(ngModel)]="doctor.gender" [value]="doctor.gender" class="form-control" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <button type="submit" (click)="saveDoctor()" class="btn btn-dark">Create</button>
+            <a routerLink="/" class="btn btn-light ms-2">Close</a>
+          </div>
+
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!-- <pre>{{doctor | json}}</pre> -->

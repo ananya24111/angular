@@ -1,0 +1,47 @@
+<div class="container">
+    <form class="form-inline my-4 ">
+        <input class="form-control mr-sm-2" type="search" placeholder="Enter Id" [(ngModel)]="id" name="id" aria-label="Search">
+        <div class="d-flex justify-content-center align-items-center"><br><br><br><br>
+            <button class="btn btn-dark " type="submit" (click)="showPatientInfo()"><i class="fa fa-search"></i> Search</button>
+        </div>
+      </form>
+      <!-- Jumbotron -->
+<div class="p-5 text-center">
+<div class="mask">
+<div class="d-flex justify-content-center align-items-center">
+    <table>
+      <tr>
+        <td>Patient Name:</td>
+        <td>{{patient.name}}</td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>{{patient.gender}}</td>
+      </tr>
+      <tr>
+        <td>Visit Date:</td>
+        <td>{{patient.date_of_visit}}</td>
+      </tr>
+      <tr>
+        <td>Doctor Name:</td>
+        <td>{{patient.doctor_name}}</td>
+      </tr>
+      <tr>
+        <td>Age:</td>
+        <td>{{patient.age}}</td>
+      </tr>
+      <tr>
+        <td>Prescription:</td>
+        <td>{{patient.prescription}}</td>
+      </tr>
+      </table>
+</div>
+</div>
+<br>
+
+</div>
+
+</div>
+
+
+<!-- Jumbotron -->

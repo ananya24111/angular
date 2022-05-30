@@ -1,0 +1,55 @@
+<div class="bg">
+    <div class="container" style="width:700px">
+      <div class="row">
+        <div class="col">
+          <p style="text-align: center;color:white; font-size: 30px;">Admit Patient</p>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="width:700px">
+      <div class="row">
+        <div style="width: 720px;padding-left: 100px;padding-right: 100px;">
+          <form>
+            <div class="mb-2">
+              <label for="" style="color:white;">Patient Name</label>
+              <input name="name" [(ngModel)]="patient.name" required="true" type="text" class="form-control" placeholder="patient name">
+            </div>
+            <div class="mb-2">
+              <label for="" style="color:white;">Doctor Name</label>
+              <select class="form-control" [(ngModel)]="patient.doctor_name" name="name">
+                <option *ngFor="let doctor of doctors" value="{{doctor.name}}">{{doctor.name}}</option>
+            </select>
+          </div>
+            <div class="mb-2">
+              <label for="" style="color:white;">Date Of Admission</label>
+              <input name="field" required="true" [(ngModel)]="patient.date_of_visit" type="date" class="form-control" placeholder="Enter date of admission">
+            </div>
+            <div class="mb-2">
+              <label for="" style="color:white;">Age</label>
+              <input name="age" required="true" [(ngModel)]="patient.age" type="number" class="form-control" placeholder="Enter age">
+            </div>
+            <div class="mb-2">
+              <label for="gender" style="color:white;">Choose Gender</label>
+              <select id="gender" class="form-control" [(ngModel)]="patient.gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+       
+            <div class="mb-2">
+              <label for="" style="color:white;">Precription</label>
+              <input name="Precription" [(ngModel)]="patient.prescription" name="prescription" required="true" type="text" class="form-control" placeholder="Enter url">
+            </div>
+          
+            <div class="mb-2">
+              <button type="submit" (click)="savePatient()" class="btn btn-dark">Create</button>
+              <a routerLink="/" class="btn btn-light ms-2">Close</a>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <pre>{{patient|json}}</pre> -->
